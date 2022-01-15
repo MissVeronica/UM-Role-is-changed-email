@@ -2,7 +2,8 @@
 
 This is an additional custom email template to the Ultimate Member email templates.
 If enabled an user role change by an administrator will trigger sending of the email to the users email address.
-Available placeholders for the email template are:
+
+Available user placeholders for the email template are:
 
 {role}         New user role 
 
@@ -13,6 +14,14 @@ Available placeholders for the email template are:
 {email}        User email address
 
 {username}     User name
+
+{site_name}    Site name
+
+{site_url}     Site URL
+
+{admin_email}  Site administration email
+
+{login_url}    Login URL
 
 ## Installation
 
