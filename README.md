@@ -1,4 +1,4 @@
-# UM Role is changed email
+# UM Role is changed email template
 
 This is an additional custom email template to the Ultimate Member email templates.
 If enabled an user role change by an administrator will trigger sending of the email to the users email address.
