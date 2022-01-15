@@ -33,9 +33,9 @@ Copy the Email Body from "email_body.txt" and save in the template Message Body 
 
 Save the "Role is changed email" template after your text adjustments or translation in Visual Mode.
 
-## Reference
+## References
 
-How to add and use custom email templates
+How to add and use UM custom email templates
 
 https://docs.ultimatemember.com/article/1515-how-to-add-and-use-custom-email-templates
 
