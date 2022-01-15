@@ -20,6 +20,12 @@ Install the source.php file to your child-theme's functions.php file or use the 
 
 Activate the email template at UM Settings -> Email -> "Role is changed email"
 
-Copy the Email body from email_body.txt and save in the template while the text area is in text mode.
+Copy the Email Body from "email_body.txt" and save in the template Message Body while the text area is in Text Mode.
 
-Save the "Role is changed email" template after your text adjustments or translation.
+Save the "Role is changed email" template after your text adjustments or translation in Visual Mode.
+
+## Reference
+
+How to add and use custom email templates
+
+https://docs.ultimatemember.com/article/1515-how-to-add-and-use-custom-email-templates
