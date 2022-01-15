@@ -1,5 +1,5 @@
 <?php
-
+// Version 1.0 2022-01-15
 
 add_filter( 'um_email_notifications', 'custom_email_notifications_role_is_changed', 10, 1 );
 add_action( 'set_user_role', 'custom_role_is_changed_email', 10, 3 );
