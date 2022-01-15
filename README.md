@@ -38,3 +38,7 @@ Save the "Role is changed email" template after your text adjustments or transla
 How to add and use custom email templates
 
 https://docs.ultimatemember.com/article/1515-how-to-add-and-use-custom-email-templates
+
+"Code Snippets" plugin
+
+https://wordpress.org/plugins/code-snippets/
