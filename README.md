@@ -25,7 +25,7 @@ Available user placeholders for the email template are:
 
 ## Installation
 
-Install the source.php file to your child-theme's functions.php file or use the "Code Snippets" plugin.
+Install the "source.php" file to your child-theme's functions.php file or use the "Code Snippets" plugin.
 
 Activate the email template at UM Settings -> Email -> "Role is changed email"
 
