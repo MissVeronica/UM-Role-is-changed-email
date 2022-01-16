@@ -18,7 +18,7 @@ add_action( 'set_user_role', 'custom_role_is_changed_email', 10, 3 );
 
         UM()->options()->options = array_merge( array(
                     'role_is_changed_email_on'  => 1,
-                    'role_is_changed_email_sub' => 'Role Change {site_name}!', ), 
+                    'role_is_changed_email_sub' => 'Role Change {site_name}', ), 
                      UM()->options()->options );
     
         return array_merge( $custom_emails, $emails );
