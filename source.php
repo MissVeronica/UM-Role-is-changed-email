@@ -4,7 +4,7 @@
 
 add_filter( 'um_email_notifications',        'custom_email_notifications_role_is_changed', 10, 1 );
 add_action( 'set_user_role',                 'custom_role_is_changed_email', 10, 3 );
-add_action( 'um_after_email_template_part',  'custom_do_placeholders', 20, 3 );
+add_action( 'um_after_email_template_part',  'custom_do_placeholders', 9, 3 );
 
     function custom_email_notifications_role_is_changed( $emails ) {
 
