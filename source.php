@@ -51,7 +51,7 @@ add_action( 'um_after_email_template_part',  'custom_do_placeholders', 9, 3 );
 
     function custom_do_placeholders( $slug, $located, $args ) {
 
-        if( $slug == 'role_is_changed_email' ) {
+        if( $slug == 'role_is_changed_email' && !empty( $args )) {
             echo str_replace( array_keys( $args ), $args, ob_get_clean() );
         }
     }
