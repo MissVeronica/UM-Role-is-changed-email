@@ -1,10 +1,9 @@
 <?php
 
-// Version 1.2 2022-03-13
+// Version 1.3 2022-03-13
 
-add_filter( 'um_email_notifications',        'custom_email_notifications_role_is_changed', 10, 1 );
-add_action( 'set_user_role',                 'custom_role_is_changed_email', 10, 3 );
-add_action( 'um_after_email_template_part',  'custom_do_placeholders', 9, 3 );
+add_filter( 'um_email_notifications', 'custom_email_notifications_role_is_changed', 10, 1 );
+add_action( 'set_user_role',          'custom_role_is_changed_email', 10, 3 );
 
     function custom_email_notifications_role_is_changed( $emails ) {
 
@@ -30,7 +29,6 @@ add_action( 'um_after_email_template_part',  'custom_do_placeholders', 9, 3 );
 
         if( !empty( $old_roles )) {
 
-            $userdata = get_userdata( $user_id );
             $all_roles = UM()->roles()->get_roles();
 
             $old_role_names = array();
@@ -38,20 +36,13 @@ add_action( 'um_after_email_template_part',  'custom_do_placeholders', 9, 3 );
                 $old_role_names[] = $all_roles[$old_role];
             }
 
-            $args = array(  '{role}'         => $all_roles[$role], 
-                            '{old_role}'     => implode( ',', $old_role_names ),
-                            '{display_name}' => $userdata->display_name,
-                            '{email}'        => $userdata->user_email,
-                            '{username}'     => $userdata->user_login
-                        );
+            $args['tags'] = array(  '{role}', 
+                                    '{old_role}' );
 
-            UM()->mail()->send( $userdata->user_email, 'role_is_changed_email', $args );
-        }
-    }
+            $args['tags_replace'] = array(  $all_roles[$role], 
+                                            implode( ',', $old_role_names ));
 
-    function custom_do_placeholders( $slug, $located, $args ) {
-
-        if( $slug == 'role_is_changed_email' && !empty( $args )) {
-            echo str_replace( array_keys( $args ), $args, ob_get_clean() );
+            um_fetch_user( $user_id );
+            UM()->mail()->send( um_user( 'user_email' ), 'role_is_changed_email', $args );
         }
     }
