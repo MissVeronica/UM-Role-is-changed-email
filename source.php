@@ -27,7 +27,7 @@ add_action( 'set_user_role',          'custom_role_is_changed_email', 10, 3 );
 
     function custom_role_is_changed_email( $user_id, $role, $old_roles ) {
 
-        if( !empty( $old_roles )) {
+        if( !empty( $old_roles ) && !in_array( $role, $old_roles )) {
 
             $all_roles = UM()->roles()->get_roles();
 
